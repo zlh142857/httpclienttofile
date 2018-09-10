@@ -1,8 +1,12 @@
 package com.hx.config;
 
+import org.apache.commons.httpclient.methods.PostMethod;
 import org.apache.http.Consts;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
+import org.apache.http.StatusLine;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
 import org.apache.http.client.ResponseHandler;
 import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -14,6 +18,7 @@ import org.apache.http.entity.mime.MultipartEntityBuilder;
 import org.apache.http.entity.mime.content.StringBody;
 import org.apache.http.impl.client.BasicResponseHandler;
 import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 import org.springframework.stereotype.Controller;
@@ -22,10 +27,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import javax.swing.text.html.parser.Entity;
+import java.io.*;
 import java.nio.charset.Charset;
 
 /*发送文件
@@ -45,7 +48,7 @@ public class HttpSend {
         //创建HttpClient对象
         CloseableHttpClient client = HttpClients.createDefault();
         //接收文件的路径
-        HttpPost post = new HttpPost("http://"+Ipall+":8080/receiveData.do");//httpclienttofile_war  http://172.16.107.205:8080/httptwo.do
+        HttpPost post = new HttpPost("http://"+Ipall+":8080/httpReceive.do");//httpclienttofile_war  http://172.16.107.205:8080/httptwo.do
         RequestConfig requestConfig = RequestConfig.custom().setSocketTimeout(50000).setConnectTimeout(50000).build();//设置请求和传输超时时间
         post.setConfig(requestConfig);
         String fileName = file.getOriginalFilename();
@@ -101,39 +104,32 @@ public class HttpSend {
      * @date: 2018/9/10 15:57
      */
     public static String HttpPostWithJson(String Ipall, String json) {
-        CloseableHttpClient httpClient = HttpClients.createDefault();
-        ResponseHandler<String> responseHandler = new BasicResponseHandler();
-        try{
-            //第一步：创建HttpClient对象
-            httpClient = HttpClients.createDefault();
-            //第二步：创建httpPost对象
-            HttpPost httpPost = new HttpPost("http://"+Ipall+":8080/receiveData.do");
-            //第三步：给httpPost设置JSON格式的参数
-            StringEntity se = new StringEntity(json.toString());
-            se.setContentEncoding("UTF-8");
-            se.setContentType("application/json");
-            httpPost.setEntity(se);
-            CloseableHttpResponse response = httpClient.execute(httpPost);
-            HttpEntity entity = response.getEntity();
-            String resData = EntityUtils.toString(response.getEntity());
-            httpClient.close();
-        }
-        catch(Exception e)
-        {
+        HttpClient httpClient = new DefaultHttpClient();
+        HttpPost post = new HttpPost("http://"+Ipall+":8080/receiveData.do");
+        post.addHeader("Content-type","application/json; charset=UTF-8");
+        post.setHeader("Accept", "application/json");
+        post.setEntity(new StringEntity(json.toString(), Charset.forName("UTF-8")));
+        try {
+            HttpResponse res = httpClient.execute(post);
+            String str = EntityUtils.toString(res.getEntity());
+            StatusLine statusLine=res.getStatusLine();
+            int status=statusLine.getStatusCode();
+            if(status==200 && str.equals("接收成功")){
+                return "发送成功";
+            }else if(status ==400){
+                return "接收参数不一致";
+            }
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+            return "发送失败";
+        } catch (ClientProtocolException e) {
+            e.printStackTrace();
+            return "发送失败";
+        } catch (IOException e) {
             e.printStackTrace();
             return "发送失败";
         }
-        finally {
-            try {
-                httpClient.close();
-            } catch (IOException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                return "发送失败";
-            }
-        }
-        //第五步：处理返回值
-        return "发送成功";
+        return "发送失败";
     }
 
 }
