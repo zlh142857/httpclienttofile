@@ -1,6 +1,5 @@
-package com.hx.controller;
+package com.hx.config;
 
-import com.hx.config.FileUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -8,7 +7,8 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.*;
+import java.io.PrintWriter;
+
 /*接收文件*/
 @Controller
 public class HttpReceive {
