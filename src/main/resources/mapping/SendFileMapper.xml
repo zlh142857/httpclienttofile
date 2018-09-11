@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hx.dao.SendFileMapper" >
+  <resultMap id="BaseResultMap" type="com.hx.model.Last" >
+  </resultMap>
+<!--根据userID查询每个用户对应的最后登录的两个IP-->
+  <select id="selectIpsByUserid" resultMap="BaseResultMap" parameterType="Integer">
+    select client_ip,territory_ip,username from last where
+    landing_time=(select max(landing_time) from last where userid=#{s}) and userid=#{s}
+  </select>
+</mapper>

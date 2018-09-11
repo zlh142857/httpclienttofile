@@ -5,10 +5,8 @@ package com.hx.model;/*
  *@功能:
  */
 
-import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.Serializable;
-import java.util.Date;
 
 public class FileData implements Serializable {
     private static final long serialVersionUID = 2144347562398115627L;
