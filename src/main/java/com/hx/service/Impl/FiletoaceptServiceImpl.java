@@ -9,13 +9,14 @@ import com.hx.dao.FiletoaceptMapper;
 import com.hx.model.Filetoacept;
 import com.hx.service.FiletoaceptService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.stereotype.Service;
 
 @Service
 public class FiletoaceptServiceImpl implements FiletoaceptService {
     @Autowired
     private FiletoaceptMapper filetoaceptMapper;
-
+    @CacheEvict(value="accountCache")
     public void insertFtc(Filetoacept ftc) {
         filetoaceptMapper.insertFtc(ftc);
     }

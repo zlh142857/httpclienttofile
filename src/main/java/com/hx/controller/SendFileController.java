@@ -10,6 +10,7 @@ import com.hx.config.FileUtil;
 import com.hx.config.HttpSend;
 import com.hx.model.*;
 import com.hx.service.FiletoaceptService;
+import com.hx.service.LoginService;
 import com.hx.service.SendFileService;
 import com.hx.service.UdpsendfileService;
 import net.sf.json.JSONArray;
@@ -89,7 +90,6 @@ public class SendFileController {
                         Login login=(Login)session.getAttribute("login");*/
                         //String filepath="/usr/uploadImage/"+filename;
                         //根据接收人的id查询接收人的姓名
-
                         String filepath="D:\\aaaaaa\\"+filename;
                         Filetoacept filetoacept=new Filetoacept();
                         //filetoacept.setDispatcher_id(login.getId());
@@ -134,7 +134,7 @@ public class SendFileController {
                 sb.append(line);
             }
             String str = sb.toString();
-            //将数据存进数据库
+            //将数据存进数据库,接收文件统计列表
             List<Filetoacept> filetoacept= (List<Filetoacept>)JSONArray.toCollection(JSONArray.fromObject(str), Filetoacept.class);
             for (Filetoacept ftc:filetoacept){
                 filetoaceptService.insertFtc(ftc);
