@@ -15,4 +15,8 @@ import org.springframework.stereotype.Service;
 public class FiletoaceptServiceImpl implements FiletoaceptService {
     @Autowired
     private FiletoaceptMapper filetoaceptMapper;
+
+    public void insertFtc(Filetoacept ftc) {
+        filetoaceptMapper.insertFtc(ftc);
+    }
 }

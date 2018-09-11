@@ -8,11 +8,11 @@ package com.hx.controller;/*
 import com.alibaba.fastjson.JSONObject;
 import com.hx.config.FileUtil;
 import com.hx.config.HttpSend;
-import com.hx.model.FileData;
-import com.hx.model.Last;
-import com.hx.model.Udpsendfile;
+import com.hx.model.*;
+import com.hx.service.FiletoaceptService;
 import com.hx.service.SendFileService;
-import jdk.nashorn.internal.ir.RuntimeNode;
+import com.hx.service.UdpsendfileService;
+import net.sf.json.JSONArray;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,11 +20,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.servlet.ServletContextAttributeEvent;
-import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.*;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -36,18 +36,22 @@ import java.util.concurrent.Executors;
 public class SendFileController {
     @Autowired
     private SendFileService sendFileService;
+    @Autowired
+    private UdpsendfileService udpsendfileService;
+    @Autowired
+    private FiletoaceptService filetoaceptService;
     /**
      *
      * 功能描述: 发送一个文件给多个用户
      *
-     * @param:
+     * @param:@RequestParam("file") final MultipartFile file, String userids
      * @return: 
      * @auther: 张立恒
      * @date: 2018/9/11 9:17
      */
     @RequestMapping("/sendFile")
     @ResponseBody
-    public String sendFile(@RequestParam("file") MultipartFile file,String userids){
+    public String sendFile(@RequestParam("file") final MultipartFile file, String userids){
         ExecutorService fixedThreadPool = Executors.newFixedThreadPool(3);
         String [] str=userids.split(",");
         int size=str.length;
@@ -56,6 +60,7 @@ public class SendFileController {
             final Last last;
             final HttpServletRequest request = null;
             final MultipartFile files = file;
+            final String [] strs=str;
             //根据userID查询每个用户对应的最后登录的两个IP
             last=sendFileService.selectIpsByUserid(Integer.valueOf(str[index]));
             fixedThreadPool.execute(new Runnable() {
@@ -65,43 +70,47 @@ public class SendFileController {
                         HttpSend.sendHttp(files,last.getTerritory_ip(),request);
                         //将获取到的文件数据发送到工具类
                         String filename=files.getOriginalFilename();
-                        String Ip=last.getClient_ip();
+                        String username=last.getUsername();
                         String Ipall=last.getTerritory_ip();
+                        Integer userid=last.getUserid();
                         Date date=new Date();
                         SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
                         String time=sdf.format(date);
-                        /*FileData fileData=new FileData();
-                        fileData.setFilename(filename);
-                        fileData.setIp(Ip);
-                        fileData.setIpall(Ipall);
-                        fileData.setSendTime(time);*/
+                        Date now=sdf.parse(time);
                         Udpsendfile udpsendfile=new Udpsendfile();
-
-
+                        udpsendfile.setFilename(filename);
+                        udpsendfile.setReceiverid(userid);
+                        udpsendfile.setRecipient(username);
+                        udpsendfile.setPosttime(now);
                         //将发送的数据存放到发文统计表
-                        //sendFileService.insertUdpsendfile();
-                        List<FileData> list=new ArrayList<FileData>();
-                        //list.add(fileData);
+                        udpsendfileService.insertUdpsendfile(udpsendfile);
+                        //将发送的数据添加到工具类,从session获取发送人的id
+                        /*HttpSession session = request.getSession();
+                        Login login=(Login)session.getAttribute("login");*/
+                        //String filepath="/usr/uploadImage/"+filename;
+                        //根据接收人的id查询接收人的姓名
+
+                        String filepath="D:\\aaaaaa\\"+filename;
+                        Filetoacept filetoacept=new Filetoacept();
+                        //filetoacept.setDispatcher_id(login.getId());
+                        filetoacept.setFilename(filename);
+                        filetoacept.setGetfileid(last.getUserid());
+                        filetoacept.setFilesaving(filepath);
+                        filetoacept.setReadunread((byte) 1);
+                        List<Filetoacept> list=new ArrayList<Filetoacept>();
+                        list.add(filetoacept);
                         JSONObject jsonObject=new JSONObject();
                         String json=jsonObject.toJSONString(list);
-                        String re=HttpSend.HttpPostWithJson(Ipall,json);
+                        HttpSend.HttpPostWithJson(Ipall,json);
                         Thread.sleep(2000);
                     } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    } catch (ParseException e) {
                         e.printStackTrace();
                     }
                 }
             });
         }
-        /*Date date=new Date();
-        SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        String time=sdf.format(date);*/
-        //根据userID查询用户最后的登录IP
-        //JSONObject jsonObject=new JSONObject();
-        //String json=jsonObject.toJSONString(list);
-        //发送文件
-        //HttpSend.sendHttp(file,Ipall,request);
-        //发送文件数据
-        //String re=HttpSend.HttpPostWithJson("172.16.107.205",json);
         return "发送成功";
     }
     /**
@@ -126,6 +135,10 @@ public class SendFileController {
             }
             String str = sb.toString();
             //将数据存进数据库
+            List<Filetoacept> filetoacept= (List<Filetoacept>)JSONArray.toCollection(JSONArray.fromObject(str), Filetoacept.class);
+            for (Filetoacept ftc:filetoacept){
+                filetoaceptService.insertFtc(ftc);
+            }
             if(str!=""){
                 String rs="接收成功";
                 response.setCharacterEncoding("utf-8");

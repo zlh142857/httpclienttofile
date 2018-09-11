@@ -13,7 +13,6 @@ import java.util.Date;
 public class Last implements Serializable {
     private Integer id;
     private Integer userid;
-    private String client_ip;
     private String username;
     private String territory_ip;
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
@@ -33,14 +32,6 @@ public class Last implements Serializable {
 
     public void setUserid(Integer userid) {
         this.userid = userid;
-    }
-
-    public String getClient_ip() {
-        return client_ip;
-    }
-
-    public void setClient_ip(String client_ip) {
-        this.client_ip = client_ip;
     }
 
     public String getUsername() {
@@ -72,7 +63,6 @@ public class Last implements Serializable {
         return "Last{" +
                 "id=" + id +
                 ", userid=" + userid +
-                ", client_ip='" + client_ip + '\'' +
                 ", username='" + username + '\'' +
                 ", territory_ip='" + territory_ip + '\'' +
                 ", landing_time=" + landing_time +

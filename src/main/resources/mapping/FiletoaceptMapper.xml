@@ -3,5 +3,41 @@
 <mapper namespace="com.hx.dao.FiletoaceptMapper" >
   <resultMap id="BaseResultMap" type="com.hx.model.Filetoacept" >
   </resultMap>
-
+<insert id="insertFtc" parameterType="com.hx.model.Filetoacept">
+  INSERT INTO filetoacept
+  <trim prefix="(" suffix=")" suffixOverrides=",">
+    <if test="dispatcher_id != null and dispatcher_id != ''">
+      dispatcher_id,
+    </if>
+    <if test="filename != null and filename != ''">
+      filename,
+    </if>
+    <if test="filesaving != null and filesaving != ''">
+      filesaving,
+    </if>
+    <if test="getfileid != null and getfileid != ''">
+      getfileid,
+    </if>
+    <if test="readunread != null and readunread != ''">
+      readunread,
+    </if>
+  </trim>
+  <trim prefix=" values (" suffix=")" suffixOverrides=",">
+    <if test="dispatcher_id != null and dispatcher_id != ''">
+      #{dispatcher_id,jdbcType=INTEGER},
+    </if>
+    <if test="filename != null and filename != ''">
+      #{filename,jdbcType=VARCHAR},
+    </if>
+    <if test="filesaving != null and filesaving != ''">
+      #{filesaving,jdbcType=VARCHAR},
+    </if>
+    <if test="getfileid != null and getfileid != ''">
+      #{getfileid,jdbcType=INTEGER},
+    </if>
+    <if test="readunread != null and readunread != ''">
+      #{readunread,jdbcType=TINYINT},
+    </if>
+  </trim>
+</insert>
 </mapper>
