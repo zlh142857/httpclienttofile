@@ -18,6 +18,7 @@ public class Udpsendfile implements Serializable {
     private String recipient;
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date posttime;
+    private Integer userid;
     public Integer getId() {
         return id;
     }
@@ -58,6 +59,14 @@ public class Udpsendfile implements Serializable {
         this.posttime = posttime;
     }
 
+    public Integer getUserid() {
+        return userid;
+    }
+
+    public void setUserid(Integer userid) {
+        this.userid = userid;
+    }
+
     @Override
     public String toString() {
         return "Udpsendfile{" +
@@ -66,6 +75,7 @@ public class Udpsendfile implements Serializable {
                 ", filename='" + filename + '\'' +
                 ", recipient='" + recipient + '\'' +
                 ", posttime=" + posttime +
+                ", userid=" + userid +
                 '}';
     }
 }

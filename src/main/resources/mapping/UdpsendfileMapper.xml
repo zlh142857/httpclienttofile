@@ -18,6 +18,9 @@ INSERT INTO udpsendfile
     <if test="posttime != null and posttime != ''">
       posttime,
     </if>
+    <if test="userid != null and userid != ''">
+      userid,
+    </if>
   </trim>
   <trim prefix=" values (" suffix=")" suffixOverrides=",">
     <if test="receiverid != null and receiverid != ''">
@@ -31,6 +34,9 @@ INSERT INTO udpsendfile
     </if>
     <if test="posttime != null and posttime != ''">
       #{posttime,jdbcType=TIMESTAMP},
+    </if>
+    <if test="userid != null and userid != ''">
+      #{userid,jdbcType=INTEGER},
     </if>
   </trim>
 </insert>
