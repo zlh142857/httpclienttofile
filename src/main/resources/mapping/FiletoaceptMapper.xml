@@ -19,4 +19,41 @@
   <select id="listFileToAceptMsg" resultMap="BaseResultMap">
 	select * from filetoacept t where t.receiver_id=#{receiverid,jdbcType=INTEGER}  and t.readunread = #{readunread,jdbcType=INTEGER}
   </select>
+<insert id="insertFtc" parameterType="com.hx.model.Filetoacept">
+  INSERT INTO filetoacept
+  <trim prefix="(" suffix=")" suffixOverrides=",">
+    <if test="dispatcher_id != null and dispatcher_id != ''">
+      dispatcher_id,
+    </if>
+    <if test="filename != null and filename != ''">
+      filename,
+    </if>
+    <if test="filesaving != null and filesaving != ''">
+      filesaving,
+    </if>
+    <if test="receiver_id != null and receiver_id != ''">
+      receiver_id,
+    </if>
+    <if test="readunread != null and readunread != ''">
+      readunread,
+    </if>
+  </trim>
+  <trim prefix=" values (" suffix=")" suffixOverrides=",">
+    <if test="dispatcher_id != null and dispatcher_id != ''">
+      #{dispatcher_id,jdbcType=INTEGER},
+    </if>
+    <if test="filename != null and filename != ''">
+      #{filename,jdbcType=VARCHAR},
+    </if>
+    <if test="filesaving != null and filesaving != ''">
+      #{filesaving,jdbcType=VARCHAR},
+    </if>
+    <if test="receiver_id != null and receiver_id != ''">
+      #{receiver_id,jdbcType=INTEGER},
+    </if>
+    <if test="readunread != null and readunread != ''">
+      #{readunread,jdbcType=TINYINT},
+    </if>
+  </trim>
+</insert>
 </mapper>

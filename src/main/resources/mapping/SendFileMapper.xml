@@ -5,7 +5,7 @@
   </resultMap>
 <!--根据userID查询每个用户对应的最后登录的两个IP-->
   <select id="selectIpsByUserid" resultMap="BaseResultMap" parameterType="Integer">
-    select client_ip,territory_ip,username from last where
+    select territory_ip,username,userid from last where
     landing_time=(select max(landing_time) from last where userid=#{s}) and userid=#{s}
   </select>
 </mapper>

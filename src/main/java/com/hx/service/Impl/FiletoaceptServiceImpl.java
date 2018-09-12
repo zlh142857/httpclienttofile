@@ -10,6 +10,7 @@ import com.hx.model.Filetoacept;
 import com.hx.service.FiletoaceptService;
 import com.sun.org.apache.bcel.internal.generic.IF_ACMPEQ;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 
@@ -43,5 +44,9 @@ public class FiletoaceptServiceImpl implements FiletoaceptService {
         } else {
             return null;
         }
+    }
+    @CacheEvict(value="accountCache")
+    public void insertFtc(Filetoacept ftc) {
+        filetoaceptMapper.insertFtc(ftc);
     }
 }
