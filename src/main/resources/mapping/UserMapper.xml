@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hx.dao.UserMapper" >
+    <resultMap id="BaseResultMap" type="com.hx.model.Login" >
+    </resultMap>
+
+    <select id="login" resultMap="BaseResultMap">
+          select * from user where name = #{name.jdbcType=VARCHAR}  AND pssword = #{pssword.jdbcType=VARCHAR}
+    </select>
+
+</mapper>
