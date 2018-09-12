@@ -14,11 +14,6 @@
   <select id="listFileToAceptMsg" resultMap="BaseResultMap"  parameterType="java.lang.Integer">
 	select * from filetoacept t where t.receiver_id=#{receiverid,jdbcType=INTEGER}  ORDER BY dispatcher_id desc
   </select>
-
-  <!--收发-->
-  <select id="listFileToAceptMsg" resultMap="BaseResultMap">
-	select * from filetoacept t where t.receiver_id=#{receiverid,jdbcType=INTEGER}  and t.readunread = #{readunread,jdbcType=INTEGER}
-  </select>
 <insert id="insertFtc" parameterType="com.hx.model.Filetoacept">
   INSERT INTO filetoacept
   <trim prefix="(" suffix=")" suffixOverrides=",">
