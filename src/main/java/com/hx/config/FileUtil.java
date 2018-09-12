@@ -24,7 +24,7 @@ import java.io.*;
 public class FileUtil {
     public static String uploadFile(byte[] file, String fileName) throws Exception {
         //String filePath="/usr/uploadImage/";
-        String filePath="D:\\aaaaaa\\";
+        String filePath="D:\\imageTest\\";
         FileOutputStream out = new FileOutputStream(filePath+fileName);
         out.write(file);
         out.flush();

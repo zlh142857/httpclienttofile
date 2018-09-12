@@ -15,8 +15,8 @@
     <if test="filesaving != null and filesaving != ''">
       filesaving,
     </if>
-    <if test="getfileid != null and getfileid != ''">
-      getfileid,
+    <if test="receiver_id != null and receiver_id != ''">
+      receiver_id,
     </if>
     <if test="readunread != null and readunread != ''">
       readunread,
@@ -32,8 +32,8 @@
     <if test="filesaving != null and filesaving != ''">
       #{filesaving,jdbcType=VARCHAR},
     </if>
-    <if test="getfileid != null and getfileid != ''">
-      #{getfileid,jdbcType=INTEGER},
+    <if test="receiver_id != null and receiver_id != ''">
+      #{receiver_id,jdbcType=INTEGER},
     </if>
     <if test="readunread != null and readunread != ''">
       #{readunread,jdbcType=TINYINT},

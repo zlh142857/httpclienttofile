@@ -18,8 +18,8 @@ public class UdpsendfileServiceImpl implements UdpsendfileService {
     @Autowired
     private UdpsendfileMapper udpsendfileMapper;
 
-    public void insertUdpsendfile(Udpsendfile udpsendfile) {
-        udpsendfileMapper.insertUdpsendfile(udpsendfile);
+    public int insertUdpsendfile(Udpsendfile udpsendfile) {
+        return udpsendfileMapper.insertUdpsendfile(udpsendfile);
     }
 
     public List<Udpsendfile> selectUpdsendfile(Integer pageStart, Integer pageSize,Integer id) {

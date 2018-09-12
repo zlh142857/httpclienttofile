@@ -14,7 +14,7 @@ public class Filetoacept implements Serializable {
     private String filename;
     private String filesaving;
     private Byte readunread;  //1为已读,2为未读
-    private Integer getfileid;
+    private Integer receiver_id;
     public Integer getId() {
         return id;
     }
@@ -55,12 +55,12 @@ public class Filetoacept implements Serializable {
         this.readunread = readunread;
     }
 
-    public Integer getGetfileid() {
-        return getfileid;
+    public Integer getReceiver_id() {
+        return receiver_id;
     }
 
-    public void setGetfileid(Integer getfileid) {
-        this.getfileid = getfileid;
+    public void setReceiver_id(Integer receiver_id) {
+        this.receiver_id = receiver_id;
     }
 
     @Override
@@ -71,7 +71,7 @@ public class Filetoacept implements Serializable {
                 ", filename='" + filename + '\'' +
                 ", filesaving='" + filesaving + '\'' +
                 ", readunread=" + readunread +
-                ", getfileid=" + getfileid +
+                ", receiver_id=" + receiver_id +
                 '}';
     }
 }
