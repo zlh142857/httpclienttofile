@@ -45,7 +45,6 @@ public class FiletoaceptServiceImpl implements FiletoaceptService {
             return null;
         }
     }
-    @CacheEvict(value="accountCache")
     public void insertFtc(Filetoacept ftc) {
         filetoaceptMapper.insertFtc(ftc);
     }

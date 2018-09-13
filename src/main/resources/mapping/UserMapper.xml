@@ -5,7 +5,7 @@
     </resultMap>
 
     <select id="login" resultMap="BaseResultMap">
-          select * from user where name = #{name.jdbcType=VARCHAR}  AND pssword = #{pssword.jdbcType=VARCHAR}
+          select * from user where name = #{name.jdbcType=VARCHAR}  AND pssword = #{password.jdbcType=VARCHAR}
     </select>
 
 </mapper>
