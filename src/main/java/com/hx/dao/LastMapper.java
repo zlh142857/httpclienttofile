@@ -5,5 +5,9 @@ package com.hx.dao;/*
  *@功能:
  */
 
+import com.hx.model.Last;
+
 public interface LastMapper {
+
+    int insertLoginLog(Last last);
 }

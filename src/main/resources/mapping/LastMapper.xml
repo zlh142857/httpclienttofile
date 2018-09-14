@@ -4,4 +4,10 @@
   <resultMap id="BaseResultMap" type="com.hx.model.Last" >
   </resultMap>
 
+  <insert id="insertLoginLog" parameterType="com.hx.model.Last">
+    insert  into
+    last(id,userid,username,territory_ip,landing_time)
+    values (#{id},#{userid},#{username},#{territory_ip},#{landing_time})
+  </insert>
+
 </mapper>
