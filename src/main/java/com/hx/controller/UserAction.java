@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.net.Inet4Address;
 import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.net.SocketException;
@@ -58,20 +59,19 @@ public class UserAction {
      * @param login
      */
     private void loginInfoLog(Login login) {
-        String SERVER_IP = null;
+        Enumeration<NetworkInterface> nis;
+        String ip = null;
         try {
-            Enumeration netInterfaces = NetworkInterface.getNetworkInterfaces();
-            InetAddress ip = null;
-            while (netInterfaces.hasMoreElements()) {
-                NetworkInterface ni = (NetworkInterface) netInterfaces.nextElement();
-                ip = (InetAddress) ni.getInetAddresses().nextElement();
-                SERVER_IP = ip.getHostAddress();
-                if (!ip.isSiteLocalAddress() && !ip.isLoopbackAddress()
-                        && ip.getHostAddress().indexOf(":") == -1) {
-                    SERVER_IP = ip.getHostAddress();
-                    break;
-                } else {
-                    ip = null;
+            nis = NetworkInterface.getNetworkInterfaces();
+            for (; nis.hasMoreElements();) {
+                NetworkInterface ni = nis.nextElement();
+                Enumeration<InetAddress> ias = ni.getInetAddresses();
+                for (; ias.hasMoreElements();) {
+                    InetAddress ia = ias.nextElement();
+                    //ia instanceof Inet6Address && !ia.equals("")
+                    if (ia instanceof Inet4Address && !ia.getHostAddress().equals("127.0.0.1")) {
+                        ip = ia.getHostAddress();
+                    }
                 }
             }
         } catch (SocketException e) {
@@ -82,7 +82,7 @@ public class UserAction {
         last.setUserid(login.getId());
         last.setLanding_time(new Date());
         last.setUsername(login.getName());
-        last.setTerritory_ip(SERVER_IP);
+        last.setTerritory_ip(ip);
         lastService.insertLoginLog(last);
     }
 
