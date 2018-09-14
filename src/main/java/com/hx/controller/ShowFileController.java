@@ -28,7 +28,7 @@ public class ShowFileController {
         OutputStream writer = null;
         try {
             /*/usr/uploadImage/*/
-            inputStream = new FileInputStream(new File("D:\\aaaaaa\\"+filename));
+            inputStream = new FileInputStream(new File("/usr/uploadImage/"+filename));
             writer = response.getOutputStream();
 
             byte[] buf = new byte[1024];
