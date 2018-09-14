@@ -6,8 +6,8 @@
 
   <insert id="insertLoginLog" parameterType="com.hx.model.Last">
     insert  into
-    last(id,userid,username,territory_ip,landing_time)
-    values (#{id},#{userid},#{username},#{territory_ip},#{landing_time})
+    last(userid,username,territory_ip,landing_time)
+    values (#{userid},#{username},#{territory_ip},#{landing_time})
   </insert>
 
 </mapper>
