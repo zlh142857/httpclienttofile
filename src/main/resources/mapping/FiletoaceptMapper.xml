@@ -7,7 +7,6 @@
     <result column="filename" property="filename" jdbcType="VARCHAR" />
     <result column="filesaving" property="filesaving" jdbcType="VARCHAR" />
     <result column="readunread" property="readunread" jdbcType="INTEGER" />
-    <result column="getfileid" property="getfileid" jdbcType="INTEGER" />
     <result column="receiver_id" property="receiver_id" jdbcType="INTEGER" />
   </resultMap>
 <!--收发-->

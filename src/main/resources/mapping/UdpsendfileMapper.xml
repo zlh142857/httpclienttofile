@@ -42,7 +42,7 @@ INSERT INTO udpsendfile
 </insert>
   
   <select id="selectUpdsendfile" resultMap="BaseResultMap" parameterType="Integer">
-    select id,receiverid,filename,recipient,posttime from udpsendfile where userid=#{id}
-    limit #{pageStart},#{pageSize}
+    SELECT id,receiverid,filename,recipient,posttime FROM udpsendfile where userid=#{id}
+    ORDER BY posttime DESC limit #{pageStart},#{pageSize}
   </select>
 </mapper>

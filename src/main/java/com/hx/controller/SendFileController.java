@@ -29,8 +29,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 @Controller
 public class SendFileController {
@@ -73,8 +71,8 @@ public class SendFileController {
                             jsonObject.put("str", reStr);
                             return "successCallBack(" + jsonObject.toJSONString() + ")";
                         }else{
-                            /*HttpSession session = request.getSession();
-                            Login login=(Login)session.getAttribute("login");*/
+                            HttpSession session = request.getSession();
+                            Login login=(Login)session.getAttribute("login");
                             //将获取到的文件数据发送到工具类
                             String filename = file.getOriginalFilename();
                             String username = last.getUsername();
@@ -243,8 +241,8 @@ public class SendFileController {
                                 jsonObject.put("str", reStr);
                                 return "successCallBack(" + jsonObject.toJSONString() + ")";
                             }else{
-                           /* HttpSession session = request.getSession();
-                            Login login=(Login)session.getAttribute("login");*/
+                            HttpSession session = request.getSession();
+                            Login login=(Login)session.getAttribute("login");
                                 //将获取到的文件数据发送到工具类
                                 String filename = files[i].getOriginalFilename();
                                 String username = last.getUsername();
