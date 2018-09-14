@@ -1,9 +1,11 @@
 package com.hx.service;
 
 
-import com.hx.model.User;
+import com.hx.model.Login;
 
 public interface UserService {
     //用户登录
-    User login(String name, String password);
+    Login login(String name, String password);
+
+
 }

@@ -78,6 +78,9 @@ public class RequestUtils {
 		return buff.toString();
 	}
 
+
+
+
 	// 获取登录设备的类型
 	public static Integer getDevice(HttpServletRequest request) {
 		if (request.getHeader("User-Agent").indexOf("iOS") >= 0) {

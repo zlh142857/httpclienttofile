@@ -6,7 +6,7 @@ package com.hx.service.Impl;/*
  */
 
 import com.hx.dao.LastMapper;
-import com.hx.dao.LoginMapper;
+import com.hx.model.Last;
 import com.hx.service.LastService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,4 +15,9 @@ import org.springframework.stereotype.Service;
 public class LastServiceImpl implements LastService {
     @Autowired
     private LastMapper lastMapper;
+
+    public int insertLoginLog(Last last){
+        return lastMapper.insertLoginLog(last);
+    }
+
 }

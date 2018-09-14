@@ -1,16 +1,23 @@
 package com.hx.controller;
 
-import com.hx.model.User;
+import com.alibaba.fastjson.JSONObject;
+import com.hx.model.Login;
+import com.hx.model.Last;
+
+import com.hx.service.LastService;
 import com.hx.service.UserService;
-import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.net.InetAddress;
+import java.net.NetworkInterface;
+import java.net.SocketException;
+import java.util.Date;
+import java.util.Enumeration;
 
 
 /**
@@ -24,27 +31,69 @@ public class UserAction {
 
     @Resource
     private UserService userService;
+    @Resource
+    private LastService lastService;
 
 
-
-    @RequestMapping("/login")
+    @RequestMapping(value = "/login")
     @ResponseBody
-    public String login(HttpServletRequest request , String name, String password, Model model){
+    public String login(HttpServletRequest request, String name, String password) {
 		/*Map<String, String> map=new LinkedHashMap<String,String>();
  		map.put("name", user.getName());
 		map.put("password", user.getPassword());*/
 
-        User user = userService.login(name, password);
-        if (user != null){
-            System.out.println("用户登录："+name+password);
+        Login login = userService.login(name, password);
+        if (login != null) {
+            System.out.println("用户登录：" + name + password);
             HttpSession session = request.getSession();
-            session.setAttribute("login", user);
-            model.addAttribute("msg", "登录成功");
-            return "success";
+            session.setAttribute("login", login);
+            JSONObject jsonObject = new JSONObject();
+            jsonObject.put("str", "success");
+            loginInfoLog(login);
+            return "successCallBack(" + jsonObject.toJSONString() + ")";
+
         }
-        model.addAttribute("msg","登陆失败，用户名或密码错误");
-        return "failed";
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("str", "failed");
+        return "successCallBack(" + jsonObject.toJSONString() + ")";
     }
+
+    /**
+     * 登陆日志记录
+     * @param login
+     */
+    private void loginInfoLog(Login login) {
+        String SERVER_IP = null;
+        try {
+            Enumeration netInterfaces = NetworkInterface.getNetworkInterfaces();
+            InetAddress ip = null;
+            while (netInterfaces.hasMoreElements()) {
+                NetworkInterface ni = (NetworkInterface) netInterfaces.nextElement();
+                ip = (InetAddress) ni.getInetAddresses().nextElement();
+                SERVER_IP = ip.getHostAddress();
+                if (!ip.isSiteLocalAddress() && !ip.isLoopbackAddress()
+                        && ip.getHostAddress().indexOf(":") == -1) {
+                    SERVER_IP = ip.getHostAddress();
+                    break;
+                } else {
+                    ip = null;
+                }
+            }
+        } catch (SocketException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        Last last = new Last();
+        last.setUserid(login.getId());
+        last.setLanding_time(new Date());
+        last.setUsername(login.getName());
+        last.setTerritory_ip(SERVER_IP);
+        lastService.insertLoginLog(last);
+    }
+
+
+
+
 
 
 
