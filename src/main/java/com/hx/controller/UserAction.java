@@ -38,10 +38,6 @@ public class UserAction {
     @RequestMapping(value = "/login")
     @ResponseBody
     public String login(HttpServletRequest request, String name, String password) {
-		/*Map<String, String> map=new LinkedHashMap<String,String>();
- 		map.put("name", user.getName());
-		map.put("password", user.getPassword());*/
-
         Login login = userService.login(name, password);
         if (login != null) {
             System.out.println("用户登录：" + name + password);
@@ -51,7 +47,6 @@ public class UserAction {
             jsonObject.put("str", "success");
             loginInfoLog(login);
             return "successCallBack(" + jsonObject.toJSONString() + ")";
-
         }
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("str", "failed");
