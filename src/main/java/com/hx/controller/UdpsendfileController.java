@@ -33,10 +33,10 @@ public class UdpsendfileController {
      */
     @RequestMapping(value="/selectUpdsendfile")
     @ResponseBody
-    public String selectUpdsendfile(Integer pageStart, Integer pageSize, HttpServletRequest request){
+    public String selectUpdsendfile(HttpServletRequest request){
         HttpSession session = request.getSession();
         Login login=(Login)session.getAttribute("login");
-        List<Udpsendfile> list=udpsendfileService.selectUpdsendfile(pageStart,pageSize,login.getId());
+        List<Udpsendfile> list=udpsendfileService.selectUpdsendfile(login.getId());
         String json=JSONObject.toJSONStringWithDateFormat(list,"yyyy-MM-dd HH:mm:ss");
         return json;
     }

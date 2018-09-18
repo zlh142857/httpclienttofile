@@ -29,12 +29,18 @@ public class FiletoaceptController {
     //获取收文列表
     @RequestMapping("/get/listmsg")
     @ResponseBody
-    public List<Filetoacept> listFileToAceptMsg(Model model, HttpServletRequest request){
-        HttpSession session = request.getSession();
+    public List<Filetoacept> listFileToAceptMsg(HttpServletRequest request){ HttpSession session = request.getSession();
         Login login=(Login)session.getAttribute("login");
         Integer receiverid=login.getId();
         List<Filetoacept> filetoacepts = filetoaceptService.listFileToAceptMsg(receiverid);
         if (filetoacepts != null){
+            for(Filetoacept f:filetoacepts){
+                if(f.getReadunread()==1){
+                    f.setStatus("已读");
+                }else{
+                    f.setStatus("未读");
+                }
+            }
             return filetoacepts;
         }
         return null;
@@ -49,5 +55,17 @@ public class FiletoaceptController {
             return filetoacepts;
         }
         return null;
+    }
+    @RequestMapping("/listFileToAceptMsgStauts")
+    @ResponseBody
+    public boolean listFileToAceptMsgStauts(HttpServletRequest request){
+        HttpSession session = request.getSession();
+        Login login=(Login)session.getAttribute("login");
+        Integer receiverid=login.getId();
+        List<Filetoacept> filetoacepts = filetoaceptService.listFileToAceptMsgStauts(receiverid);
+        if (filetoacepts != null){
+            return true;
+        }
+        return false;
     }
 }

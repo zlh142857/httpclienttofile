@@ -22,9 +22,9 @@ public class FiletoaceptServiceImpl implements FiletoaceptService {
     private FiletoaceptMapper filetoaceptMapper;
 
     //获取收文列表
-    public List<Filetoacept> listFileToAceptMsg(int id) {
+    public List<Filetoacept> listFileToAceptMsg(Integer id) {
         List<Filetoacept> filetoacepts = filetoaceptMapper.listFileToAceptMsg(id);
-        if (filetoacepts.isEmpty()){
+        if (!filetoacepts.isEmpty()){
             return filetoacepts;
         } else {
             return null;
@@ -47,5 +47,22 @@ public class FiletoaceptServiceImpl implements FiletoaceptService {
     }
     public void insertFtc(Filetoacept ftc) {
         filetoaceptMapper.insertFtc(ftc);
+    }
+
+    public List<Filetoacept> listFileToAceptMsgStauts(Integer receiverid) {
+        List<Filetoacept> filetoacepts = filetoaceptMapper.listFileToAceptMsgStauts(receiverid);
+        if (!filetoacepts.isEmpty()){
+            return filetoacepts;
+        } else {
+            return null;
+        }
+    }
+
+    public void updateReadunread(Integer id) {
+        filetoaceptMapper.updateReadunread(id);
+    }
+
+    public Integer selectReCount(Integer id) {
+        return filetoaceptMapper.selectReCount(id);
     }
 }

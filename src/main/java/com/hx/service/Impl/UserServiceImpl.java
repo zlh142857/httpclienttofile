@@ -7,6 +7,8 @@ import com.hx.dao.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * @author 范聪敏
  * @date 2018/9/11 18:14
@@ -21,6 +23,10 @@ public class UserServiceImpl implements UserService {
     public Login login(String name, String password) {
         Login Login = userMapper.login(name,password);
         return Login;
+    }
+
+    public List<Login> selectRevUserList(Integer id) {
+        return userMapper.selectRevUserList(id);
     }
 
 
