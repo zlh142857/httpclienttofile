@@ -19,6 +19,45 @@ public class Udpsendfile implements Serializable {
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date posttime;
     private Integer userid;
+
+    @Override
+    public String toString() {
+        return "Udpsendfile{" +
+                "id=" + id +
+                ", receiverid=" + receiverid +
+                ", filename='" + filename + '\'' +
+                ", recipient='" + recipient + '\'' +
+                ", posttime=" + posttime +
+                ", userid=" + userid +
+                ", updatedl=" + updatedl +
+                ", del_flag=" + del_flag +
+                '}';
+    }
+
+    public Date getUpdatedl() {
+        return updatedl;
+    }
+
+    public void setUpdatedl(Date updatedl) {
+        this.updatedl = updatedl;
+    }
+
+    private Date updatedl;
+
+
+    public Integer getDel_flag() {
+        return del_flag;
+    }
+
+    public void setDel_flag(Integer del_flag) {
+        this.del_flag = del_flag;
+    }
+
+    private Integer del_flag;
+
+
+
+
     public Integer getId() {
         return id;
     }
@@ -67,15 +106,4 @@ public class Udpsendfile implements Serializable {
         this.userid = userid;
     }
 
-    @Override
-    public String toString() {
-        return "Udpsendfile{" +
-                "id=" + id +
-                ", receiverid=" + receiverid +
-                ", filename='" + filename + '\'' +
-                ", recipient='" + recipient + '\'' +
-                ", posttime=" + posttime +
-                ", userid=" + userid +
-                '}';
-    }
 }

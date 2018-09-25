@@ -12,5 +12,6 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class LastController {
     @Autowired
+
     private LastService lastService;
 }

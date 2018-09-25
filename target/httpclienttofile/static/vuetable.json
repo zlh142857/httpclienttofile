@@ -1,0 +1,82 @@
+{
+    "list": [
+        {
+            "dispatcher_id":"1",
+            "date": "1997-11-11",
+            "readunread": "未读",
+            "filename": "机要文件"
+        },
+        {
+            "dispatcher_id":"2",
+            "date": "1987-09-24",
+            "readunread": "未读",
+            "filename": "涉密文件"
+        },
+        {
+            "dispatcher_id":"3",
+            "date": "1996-08-08",
+            "readunread": "未读",
+            "filename": "关于XX文件"
+        },
+        {
+            "dispatcher_id":"4",
+            "date": "1996-08-08",
+            "readunread": "未读",
+            "filename": "关于XX文件"
+        },
+        {
+            "dispatcher_id":"5",
+            "date": "1996-08-08",
+            "readunread": "未读",
+            "filename": "关于XX文件"
+        },
+        {
+            "dispatcher_id":"6",
+            "date": "1996-08-08",
+            "readunread": "未读",
+            "filename": "关于XX文件"
+        },
+        {
+            "dispatcher_id":"7",
+            "date": "1996-08-08",
+            "readunread": "未读",
+            "filename": "关于XX文件"
+        },
+        {
+            "dispatcher_id":"8",
+            "date": "1996-08-08",
+            "readunread": "未读",
+            "filename": "关于XX文件"
+        },
+        {
+            "dispatcher_id":"8",
+            "date": "1996-08-08",
+            "readunread": "未读",
+            "filename": "关于XX文件"
+        },
+        {
+            "dispatcher_id":"8",
+            "date": "1996-08-08",
+            "readunread": "未读",
+            "filename": "关于XX文件"
+        },
+        {
+            "dispatcher_id":"8",
+            "date": "1996-08-08",
+            "readunread": "未读",
+            "filename": "关于XX文件"
+        },
+        {
+            "dispatcher_id":"8",
+            "date": "1996-08-08",
+            "readunread": "未读",
+            "filename": "关于XX文件"
+        },
+        {
+            "dispatcher_id":"8",
+            "date": "1996-08-08",
+            "readunread": "未读",
+            "filename": "关于XX文件"
+        }
+    ]
+}

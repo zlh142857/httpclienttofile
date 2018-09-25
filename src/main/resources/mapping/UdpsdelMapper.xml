@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hx.dao.UdpsdeldelMapper" >
+    <resultMap id="BaseResultMap" type="com.hx.model.Udpsendfile" >
+    </resultMap>
+    <update id="udpsdelMany" parameterType="java.lang.Integer">
+    update filetoacept set del_flag =1 where id =#{id}
+    </update>
+
+</mapper>

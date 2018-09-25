@@ -6,6 +6,7 @@ package com.hx.model;/*
  */
 
 import java.io.Serializable;
+import java.util.Date;
 
 public class Filetoacept implements Serializable {
     private static final long serialVersionUID = -6962999050093380204L;
@@ -15,6 +16,35 @@ public class Filetoacept implements Serializable {
     private String filesaving;
     private Byte readunread;  //1为已读,2为未读
     private Integer receiver_id;
+    private Integer del_flag;
+
+
+
+    @Override
+    public String toString() {
+        return "Filetoacept{" +
+                "id=" + id +
+                ", dispatcher_id=" + dispatcher_id +
+                ", filename='" + filename + '\'' +
+                ", filesaving='" + filesaving + '\'' +
+                ", readunread=" + readunread +
+                ", receiver_id=" + receiver_id +
+                ", del_flag=" + del_flag +
+                '}';
+    }
+
+    public Integer getDel_flag() {
+        return del_flag;
+    }
+
+    public void setDel_flag(Integer del_flag) {
+        this.del_flag = del_flag;
+    }
+
+
+
+
+
     public Integer getId() {
         return id;
     }
@@ -63,15 +93,4 @@ public class Filetoacept implements Serializable {
         this.receiver_id = receiver_id;
     }
 
-    @Override
-    public String toString() {
-        return "Filetoacept{" +
-                "id=" + id +
-                ", dispatcher_id=" + dispatcher_id +
-                ", filename='" + filename + '\'' +
-                ", filesaving='" + filesaving + '\'' +
-                ", readunread=" + readunread +
-                ", receiver_id=" + receiver_id +
-                '}';
-    }
 }
