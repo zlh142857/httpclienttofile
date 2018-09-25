@@ -10,28 +10,17 @@ import sun.misc.BASE64Decoder;
 import java.io.*;
 
 public class Base {
-    public static InputStream base64(InputStream in) throws IOException {
-        StringBuilder sb = new StringBuilder();
-        String line;
-        BufferedReader br = null;
-        try {
-            br = new BufferedReader(new InputStreamReader(in,"UTF-8"));
-            while ((line = br.readLine()) != null) {
-                sb.append(line);
+    public static InputStream base64(String filename) throws IOException {
+        BASE64Decoder decoder = new BASE64Decoder();
+        byte[] b = decoder.decodeBuffer(filename);//base64编码内容转换为字节数组
+        for (int i = 0; i < b.length; ++i) {
+            // 调整异常数据
+            if (b[i] < 0) {
+                b[i] += 256;
             }
-            String str = sb.toString();
-            BASE64Decoder decoder = new BASE64Decoder();
-
-            BufferedInputStream bis = null;
-            FileOutputStream fos = null;
-            BufferedOutputStream bos = null;
-            byte[] bytes = decoder.decodeBuffer(str);//base64编码内容转换为字节数组
-            InputStream inputStream = new ByteArrayInputStream(bytes);
-            return inputStream;
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
         }
-        return null;
+        InputStream inputStream = new ByteArrayInputStream(b);
+        return inputStream;
     }
 
 }

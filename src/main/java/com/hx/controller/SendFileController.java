@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
+import sun.misc.BASE64Decoder;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -48,7 +49,7 @@ public class SendFileController {
      */
     @RequestMapping(value="/pdfFile")
     @ResponseBody
-    public String file(HttpServletRequest request,String titles,String userids){
+    public String file(HttpServletRequest request,String titles,String userids,String filename) throws IOException {
         JSONObject jsonObject = new JSONObject();
         String reStr = "";
         String fileName="";
@@ -59,16 +60,12 @@ public class SendFileController {
         }else{
             fileName=titles+".pdf";
             try {
-                //获取发送过来的base
-                InputStream in=request.getInputStream();
                 //解码转换后转换成InputStream
-                InputStream inputStream=Base.base64(in);
-                if(userids.isEmpty()){
-                    reStr="请选择接收人";
-                    jsonObject.put("str", reStr);
-                    return "successCallBack(" + jsonObject.toJSONString() + ")";
-                }else{
-                    String[] str = userids.split(",");
+                InputStream inputStream=Base.base64(filename);
+                try{
+                    String ustr=userids.replace("[","");
+                    String ustr2=ustr.replace("]","");
+                    String [] str=ustr2.split(",");
                     int sizeIds=str.length;
                     for (int i = 0; i < sizeIds; i++) {
                         //根据userID查询每个用户对应的最后登录的两个IP
@@ -105,9 +102,9 @@ public class SendFileController {
                                     return "successCallBack(" + jsonObject.toJSONString() + ")";
                                 }else{
                                     //将发送的数据添加到工具类,从session获取发送人的id
-                                    String filepath="/usr/uploadImage/"+fileName;
+                                    //String filepath="/usr/uploadImage/"+fileName;
                                     //根据接收人的id查询接收人的姓名
-                                    //String filepath = "D:\\imageTest\\" + filename;
+                                    String filepath = "D:\\imageTest\\" + fileName;
                                     Filetoacept filetoacept = new Filetoacept();
                                     filetoacept.setDispatcher_id(login.getId());
                                     filetoacept.setFilename(fileName);
@@ -127,6 +124,10 @@ public class SendFileController {
                             }
                         }
                     }
+                }catch (NullPointerException n){
+                    reStr="请选择接收人";
+                    jsonObject.put("str", reStr);
+                    return "successCallBack(" + jsonObject.toJSONString() + ")";
                 }
                 reStr = "发送成功";
                 jsonObject.put("str", reStr);

@@ -41,7 +41,7 @@ public class HttpSend {
         //创建HttpClient对象
         CloseableHttpClient client = HttpClients.createDefault();
         //接收文件的路径
-        HttpPost post = new HttpPost("http://"+Ipall+":8080/httpclienttofile/httpReceive.do");//httpclienttofile_war  http://172.16.107.205:8080/httptwo.do
+        HttpPost post = new HttpPost("http://"+Ipall+":8088/httpReceive.do");//httpclienttofile_war  http://172.16.107.205:8080/httptwo.do
         RequestConfig requestConfig = RequestConfig.custom().setSocketTimeout(50000).setConnectTimeout(50000).build();//设置请求和传输超时时间
         post.setConfig(requestConfig);
         String fileName = file.getOriginalFilename();
@@ -98,7 +98,7 @@ public class HttpSend {
      */
     public static String HttpPostWithJson(String Ipall, String json) {
         HttpClient httpClient = new DefaultHttpClient();
-        HttpPost post = new HttpPost("http://"+Ipall+":8080/httpclienttofile/receiveData.do");
+        HttpPost post = new HttpPost("http://"+Ipall+":8088/receiveData.do");
         post.addHeader("Content-type","application/json; charset=UTF-8");
         post.setHeader("Accept", "application/json");
         post.setEntity(new StringEntity(json.toString(), Charset.forName("UTF-8")));
@@ -129,7 +129,7 @@ public class HttpSend {
         //创建HttpClient对象
         CloseableHttpClient client = HttpClients.createDefault();
         //接收文件的路径
-        HttpPost post = new HttpPost("http://"+Ipall+":8080/httpclienttofile/httpReceive.do");//httpclienttofile_war  http://172.16.107.205:8080/httptwo.do
+        HttpPost post = new HttpPost("http://"+Ipall+":8088/httpReceive.do");//httpclienttofile_war  http://172.16.107.205:8080/httptwo.do
         RequestConfig requestConfig = RequestConfig.custom().setSocketTimeout(50000).setConnectTimeout(50000).build();//设置请求和传输超时时间
         post.setConfig(requestConfig);
         MultipartEntityBuilder builder = MultipartEntityBuilder.create();

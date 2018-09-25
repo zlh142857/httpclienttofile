@@ -50,8 +50,6 @@ public class UserAction {
     public Login login(HttpServletRequest request, String name, String password) {
         Login login = userService.login(name, password);
         if (login != null) {
-            JSONObject jsonObject = new JSONObject();
-            jsonObject.put("str", "success");
             String ip=this.loginInfoLog();
             Last last = new Last();
             Date date=new Date();
@@ -73,8 +71,6 @@ public class UserAction {
             session.setAttribute("login", login);
             return login;
         }
-        JSONObject jsonObject = new JSONObject();
-        jsonObject.put("str", "failed");
         return null;
     }
 

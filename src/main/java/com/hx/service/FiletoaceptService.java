@@ -20,4 +20,6 @@ public interface FiletoaceptService {
     void updateReadunread(Integer id);//修改未读为已读
 
     Integer selectReCount(Integer id);
+
+    String selectUrl(Integer id);
 }

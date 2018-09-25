@@ -65,4 +65,9 @@ public class FiletoaceptServiceImpl implements FiletoaceptService {
     public Integer selectReCount(Integer id) {
         return filetoaceptMapper.selectReCount(id);
     }
+
+    @Override
+    public String selectUrl(Integer id) {
+        return filetoaceptMapper.selectUrl(id);
+    }
 }

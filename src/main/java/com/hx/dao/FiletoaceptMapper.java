@@ -22,4 +22,6 @@ public interface FiletoaceptMapper {
     void updateReadunread(@Param("id") Integer id);
 
     Integer selectReCount(@Param("id") Integer id);
+
+    String selectUrl(@Param("id") Integer id);
 }
