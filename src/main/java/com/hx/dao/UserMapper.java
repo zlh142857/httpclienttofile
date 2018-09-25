@@ -3,6 +3,7 @@ package com.hx.dao;
 import com.hx.model.Login;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.List;
 
 
 /**
@@ -18,4 +19,6 @@ public interface UserMapper {
 
     //登陆
     Login login(@Param(value = "name") String name,@Param(value = "password") String password);
+
+    List<Login> selectRevUserList(@Param("id") Integer id);
 }

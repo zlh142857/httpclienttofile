@@ -6,6 +6,7 @@ package com.hx.controller;/*
  */
 
 import com.alibaba.fastjson.JSONObject;
+import com.hx.config.Base;
 import com.hx.config.FileUtil;
 import com.hx.config.HttpSend;
 import com.hx.model.*;
@@ -19,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
+import sun.misc.BASE64Decoder;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -40,96 +42,102 @@ public class SendFileController {
      *
      * 功能描述: 发送一个文件给多个用户
      *
-     * @param:@RequestParam("file") final MultipartFile file, String userids
-     * @return: 
+     * @param:
+     * @return:
      * @auther: 张立恒
-     * @date: 2018/9/11 9:17
+     * @date: 2018/9/18 16:38
      */
-    @RequestMapping("/sendFile")
+    @RequestMapping(value="/pdfFile")
     @ResponseBody
-    public String sendFile(@RequestParam("file") MultipartFile file, String userids,HttpServletRequest request){
+    public String file(HttpServletRequest request,String titles,String userids,String filename) throws IOException {
         JSONObject jsonObject = new JSONObject();
         String reStr = "";
-        if (!file.isEmpty()) {
-            try{
-                String[] str = userids.split(",");
-                int size = str.length;
-                for (int i = 0; i < size; i++) {
-                    //根据userID查询每个用户对应的最后登录的两个IP
-                    Last last = sendFileService.selectIpsByUserid(Integer.valueOf(str[i]));
-                    if (last == null) {
-                        reStr = "请选择有效的接收人";
-                        jsonObject.put("str", reStr);
-                        return "successCallBack(" + jsonObject.toJSONString() + ")";
-                    }else{
-                        //将获取到的file和两个IP发送到工具类
-                        String sendRe = HttpSend.sendHttp(file, last.getTerritory_ip(), request);
-                        if (sendRe.equals("失败")) {
-                            reStr = "发送文件失败";
+        String fileName="";
+        if(titles.isEmpty()){
+            reStr="请填写文件标题";
+            jsonObject.put("str", reStr);
+            return "successCallBack(" + jsonObject.toJSONString() + ")";
+        }else{
+            fileName=titles+".pdf";
+            try {
+                //解码转换后转换成InputStream
+                InputStream inputStream=Base.base64(filename);
+                try{
+                    String ustr=userids.replace("[","");
+                    String ustr2=ustr.replace("]","");
+                    String [] str=ustr2.split(",");
+                    int sizeIds=str.length;
+                    for (int i = 0; i < sizeIds; i++) {
+                        //根据userID查询每个用户对应的最后登录的两个IP
+                        Last last = sendFileService.selectIpsByUserid(Integer.valueOf(str[i]));
+                        if(last == null){
+                            reStr="您选择的收件人不存在";
                             jsonObject.put("str", reStr);
                             return "successCallBack(" + jsonObject.toJSONString() + ")";
                         }else{
-                            HttpSession session = request.getSession();
-                            Login login=(Login)session.getAttribute("login");
-                            //将获取到的文件数据发送到工具类
-                            String filename = file.getOriginalFilename();
-                            String username = last.getUsername();
-                            String Ipall = last.getTerritory_ip();
-                            Integer userid = last.getUserid();
-                            Date date = new Date();
-                            Udpsendfile udpsendfile = new Udpsendfile();
-                            udpsendfile.setFilename(filename);
-                            udpsendfile.setReceiverid(userid);
-                            udpsendfile.setRecipient(username);
-                            udpsendfile.setPosttime(date);
-                            udpsendfile.setUserid(login.getId());
-                            //将发送的数据存放到发文统计表
-                            try {
+                            String sendRe=HttpSend.newSendFile(last.getTerritory_ip(),fileName,inputStream);
+                            if (!sendRe.equals("发送成功")) {
+                                reStr="发送文件失败";
+                                jsonObject.put("str", reStr);
+                                return "successCallBack(" + jsonObject.toJSONString() + ")";
+                            }else{
+                                HttpSession session = request.getSession();
+                                Login login=(Login)session.getAttribute("login");
+                                //将获取到的文件数据发送到工具类
+                                String username = last.getUsername();
+                                String Ipall = last.getTerritory_ip();
+                                Integer userid = last.getUserid();
+                                Date date = new Date();
+                                Udpsendfile udpsendfile = new Udpsendfile();
+                                udpsendfile.setFilename(fileName);
+                                udpsendfile.setReceiverid(userid);
+                                udpsendfile.setRecipient(username);
+                                udpsendfile.setPosttime(date);
+                                udpsendfile.setUserid(login.getId());
+                                //将发送的数据存放到发文统计表
                                 int count = udpsendfileService.insertUdpsendfile(udpsendfile);
                                 if (count != 1) {
                                     reStr = "没有记录到发文统计";
                                     jsonObject.put("str", reStr);
                                     return "successCallBack(" + jsonObject.toJSONString() + ")";
+                                }else{
+                                    //将发送的数据添加到工具类,从session获取发送人的id
+                                    //String filepath="/usr/uploadImage/"+fileName;
+                                    //根据接收人的id查询接收人的姓名
+                                    String filepath = "D:\\imageTest\\" + fileName;
+                                    Filetoacept filetoacept = new Filetoacept();
+                                    filetoacept.setDispatcher_id(login.getId());
+                                    filetoacept.setFilename(fileName);
+                                    filetoacept.setReceiver_id(last.getUserid());
+                                    filetoacept.setFilesaving(filepath);
+                                    filetoacept.setReadunread((byte) 2);
+                                    List<Filetoacept> list = new ArrayList<Filetoacept>();
+                                    list.add(filetoacept);
+                                    String json = jsonObject.toJSONString(list);
+                                    String jsonRe = HttpSend.HttpPostWithJson(Ipall, json);
+                                    if (!jsonRe.equals("发送成功")) {
+                                        reStr = "接收数据失败";
+                                        jsonObject.put("str", reStr);
+                                        return "successCallBack(" + jsonObject.toJSONString() + ")";
+                                    }
                                 }
-                                //将发送的数据添加到工具类,从session获取发送人的id
-                                String filepath="/usr/uploadImage/"+filename;
-                                //根据接收人的id查询接收人的姓名
-                                //String filepath = "D:\\imageTest\\" + filename;
-                                Filetoacept filetoacept = new Filetoacept();
-                                filetoacept.setDispatcher_id(login.getId());
-                                filetoacept.setFilename(filename);
-                                filetoacept.setReceiver_id(last.getUserid());
-                                filetoacept.setFilesaving(filepath);
-                                filetoacept.setReadunread((byte) 1);
-                                List<Filetoacept> list = new ArrayList<Filetoacept>();
-                                list.add(filetoacept);
-                                String json = jsonObject.toJSONString(list);
-                                String jsonRe = HttpSend.HttpPostWithJson(Ipall, json);
-                                if (!jsonRe.equals("发送成功")) {
-                                    reStr = "发送失败";
-                                    jsonObject.put("str", reStr);
-                                    return "successCallBack(" + jsonObject.toJSONString() + ")";
-                                }
-                            }catch (Exception e){
-                                reStr = "记录发文统计失败";
-                                jsonObject.put("str", reStr);
-                                return "successCallBack(" + jsonObject.toJSONString() + ")";
                             }
                         }
                     }
+                }catch (NullPointerException n){
+                    reStr="请选择接收人";
+                    jsonObject.put("str", reStr);
+                    return "successCallBack(" + jsonObject.toJSONString() + ")";
                 }
                 reStr = "发送成功";
                 jsonObject.put("str", reStr);
                 return "successCallBack(" + jsonObject.toJSONString() + ")";
-            }catch (NullPointerException n){
-                reStr = "请选择接收人";
+            } catch (IOException e) {
+                e.printStackTrace();
+                reStr ="获取文件异常";
                 jsonObject.put("str", reStr);
                 return "successCallBack(" + jsonObject.toJSONString() + ")";
             }
-        }else{
-            reStr="请选择要上传的文件";
-            jsonObject.put("str", reStr);
-            return "successCallBack(" + jsonObject.toJSONString() + ")";
         }
     }
     /**
@@ -237,7 +245,7 @@ public class SendFileController {
                                 return "successCallBack(" + jsonObject.toJSONString() + ")";
                             }else{
                                 HttpSession session = request.getSession();
-                                Login login=(Login)session.getAttribute("login");
+                                Login login=(Login)request.getSession().getAttribute("login");
                                 //将获取到的文件数据发送到工具类
                                 String filename = files[i].getOriginalFilename();
                                 String username = last.getUsername();
@@ -268,7 +276,7 @@ public class SendFileController {
                                     filetoacept.setFilename(filename);
                                     filetoacept.setReceiver_id(last.getUserid());
                                     filetoacept.setFilesaving(filepath);
-                                    filetoacept.setReadunread((byte) 1);
+                                    filetoacept.setReadunread((byte) 2);
                                     List<Filetoacept> list = new ArrayList<Filetoacept>();
                                     list.add(filetoacept);
                                     String json = jsonObject.toJSONString(list);

@@ -22,7 +22,11 @@ public class UdpsendfileServiceImpl implements UdpsendfileService {
         return udpsendfileMapper.insertUdpsendfile(udpsendfile);
     }
 
-    public List<Udpsendfile> selectUpdsendfile(Integer pageStart, Integer pageSize,Integer id) {
-        return udpsendfileMapper.selectUpdsendfile(pageStart,pageSize,id);
+    public List<Udpsendfile> selectUpdsendfile(Integer id) {
+        return udpsendfileMapper.selectUpdsendfile(id);
+    }
+
+    public Integer selectSendCount(Integer id) {
+        return udpsendfileMapper.selectSendCount(id);
     }
 }

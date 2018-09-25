@@ -41,7 +41,7 @@ public class HttpSend {
         //创建HttpClient对象
         CloseableHttpClient client = HttpClients.createDefault();
         //接收文件的路径
-        HttpPost post = new HttpPost("http://"+Ipall+":8080/httpReceive.do");//httpclienttofile_war  http://172.16.107.205:8080/httptwo.do
+        HttpPost post = new HttpPost("http://"+Ipall+":8088/httpReceive.do");//httpclienttofile_war  http://172.16.107.205:8080/httptwo.do
         RequestConfig requestConfig = RequestConfig.custom().setSocketTimeout(50000).setConnectTimeout(50000).build();//设置请求和传输超时时间
         post.setConfig(requestConfig);
         String fileName = file.getOriginalFilename();
@@ -98,7 +98,7 @@ public class HttpSend {
      */
     public static String HttpPostWithJson(String Ipall, String json) {
         HttpClient httpClient = new DefaultHttpClient();
-        HttpPost post = new HttpPost("http://"+Ipall+":8080/receiveData.do");
+        HttpPost post = new HttpPost("http://"+Ipall+":8088/receiveData.do");
         post.addHeader("Content-type","application/json; charset=UTF-8");
         post.setHeader("Accept", "application/json");
         post.setEntity(new StringEntity(json.toString(), Charset.forName("UTF-8")));
@@ -123,6 +123,56 @@ public class HttpSend {
             return "发送失败";
         }
         return "发送失败";
+    }
+
+    public static String newSendFile(String Ipall,String filename,InputStream inputStream){
+        //创建HttpClient对象
+        CloseableHttpClient client = HttpClients.createDefault();
+        //接收文件的路径
+        HttpPost post = new HttpPost("http://"+Ipall+":8088/httpReceive.do");//httpclienttofile_war  http://172.16.107.205:8080/httptwo.do
+        RequestConfig requestConfig = RequestConfig.custom().setSocketTimeout(50000).setConnectTimeout(50000).build();//设置请求和传输超时时间
+        post.setConfig(requestConfig);
+        MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+        builder.setMode(HttpMultipartMode.BROWSER_COMPATIBLE);
+        builder.setCharset(Charset.forName("utf-8"));
+        //第一个参数为 相当于 Form表单提交的file框的name值 第二个参数就是我们要发送的InputStream对象了
+        //第三个参数是文件名
+        //3)
+        builder.addBinaryBody("file", inputStream, ContentType.create("multipart/form-data"), filename);
+        //4)构建请求参数 普通表单项
+        StringBody stringBody = new StringBody("12", ContentType.MULTIPART_FORM_DATA);
+        builder.addPart("id", stringBody);
+        HttpEntity entity = builder.build();
+        post.setEntity(entity);
+        //发送请求
+        HttpResponse response = null;
+        try {
+            response = client.execute(post);
+            entity = response.getEntity();
+            if (entity != null) {
+                inputStream = entity.getContent();
+                //转换为字节输入流
+                BufferedReader br = new BufferedReader(new InputStreamReader(inputStream, Consts.UTF_8));
+                String body = null;
+                while ((body = br.readLine()) != null) {
+                    System.out.println(body);
+                }
+            }
+            inputStream.close();
+            return "发送成功";
+        } catch (IOException e) {
+            e.printStackTrace();
+            return "发送失败";
+        }finally {
+            if(inputStream != null){
+                try {
+                    inputStream.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    return "发送失败";
+                }
+            }
+        }
     }
 
 }
