@@ -42,7 +42,10 @@ INSERT INTO udpsendfile
 </insert>
   
   <select id="selectUpdsendfile" resultMap="BaseResultMap" parameterType="java.lang.Integer">
-    SELECT id,receiverid,filename,recipient,posttime FROM udpsendfile where userid=#{id}
-    ORDER BY posttime DESC limit #{pageStart},#{pageSize}
+    SELECT id,receiverid,filename,recipient,posttime FROM udpsendfile WHERE userid=#{id} and del_flag =0
+    ORDER BY posttime DESC
+  </select>
+  <select id="selectSendCount" resultType="java.lang.Integer" parameterType="java.lang.Integer">
+    SELECT COUNT(*) FROM udpsendfile WHERE userid=#{id,jdbcType=INTEGER}
   </select>
 </mapper>

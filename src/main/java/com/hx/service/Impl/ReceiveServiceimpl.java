@@ -4,6 +4,7 @@ import com.hx.dao.ReceiveMapper;
 import com.hx.model.Filetoacept;
 import com.hx.service.ReceiveService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -12,6 +13,7 @@ import java.util.List;
  * @date 2018/9/20 16:13
  * @desc
  */
+@Service
 public class ReceiveServiceimpl implements ReceiveService {
 
     @Autowired

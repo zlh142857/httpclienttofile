@@ -4,6 +4,7 @@ import com.hx.service.UdpsdelService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * @author 范聪敏
@@ -12,18 +13,31 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 @RequestMapping("/hx")
+
 public class UdpsdelController {
     @Autowired
     UdpsdelService us;
-    @RequestMapping("uddel")
-    public String udpsdelMany(int[] chk_value) {
-        System.out.println(chk_value);
-        if (chk_value == null ) {
-            return "redirect:/selectUpdsendfile.do";
+
+    @RequestMapping("/uddel")
+    @ResponseBody
+    public String udpsdelMany(int[] num) {
+        System.out.println(num);
+        if (num == null ) {
+            return "redirect:/hx/selectUpdsendfile.do";
+        }else {
+
+            //直接传数组
+            us.udpsdelMany(num);
+            //重定向
+            return "/hx/selectUpdsendfile.do";
         }
-        //直接传数组
-        us.udpsdelMany(chk_value);
-        //重定向
-        return "redirect:/selectUpdsendfile.do";
+
+
     }
+
+
+
+
+
+
 }

@@ -1,0 +1,1503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="httpclienttofile:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9649f410-5526-4f23-a254-109a520bd6a3" name="Default" comment="Merge branch 'master' of https://github.com/zlh142857/httpclienttofile&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/com/hx/dao/FiletoaceptMapper.java&#10;#&#9;src/main/java/com/hx/model/Filetoacept.java&#10;#&#9;src/main/java/com/hx/service/FiletoaceptService.java&#10;#&#9;src/main/java/com/hx/service/Impl/FiletoaceptServiceImpl.java&#10;#&#9;src/main/resources/mapping/FiletoaceptMapper.xml">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/src/components/common/form.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hx/config/FileUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hx/config/HttpSend.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hx/controller/DateUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hx/controller/FiletoaceptController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hx/controller/LastController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hx/controller/RequestUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hx/controller/SendFileController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hx/controller/ShowFileController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hx/controller/UdpsendfileController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hx/controller/UserAction.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hx/dao/FiletoaceptMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hx/dao/LastMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hx/dao/SendFileMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hx/dao/UdpsendfileMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hx/dao/UserMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hx/model/FileData.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hx/model/Filetoacept.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hx/model/Last.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hx/model/Login.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hx/model/Udpsendfile.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hx/service/FiletoaceptService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hx/service/Impl/FiletoaceptServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hx/service/Impl/LastServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hx/service/Impl/SendFileServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hx/service/Impl/UdpsendfileServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hx/service/Impl/UserServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hx/service/LastService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hx/service/SendFileService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hx/service/UdpsendfileService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/hx/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hx/controller/DelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hx/controller/DelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hx/controller/UdpsdelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hx/controller/UdpsdelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hx/dao/UdpsdelMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hx/dao/UdpsdelMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hx/service/Impl/DispatchServiceimpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hx/service/Impl/DispatchServiceimpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hx/service/Impl/ReceiveServiceimpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hx/service/Impl/ReceiveServiceimpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hx/service/Impl/UdpsdelServiceimpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hx/service/Impl/UdpsdelServiceimpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/DelMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapping/DelMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/UdpsdelMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapping/UdpsdelMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/README_EN.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/css/color-dark.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/css/theme-green/color-green.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/css/theme-green/fonts/element-icons.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/css/theme-green/fonts/element-icons.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/css/theme-green/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/img/img.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/js/html2canvas.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/js/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/js/jsPdf.debug.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/js/pdfjs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/js/receipt.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/js/vendor.dll.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/vuetable.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapping/FiletoaceptMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapping/FiletoaceptMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapping/UdpsendfileMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapping/UdpsendfileMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapping/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapping/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/spring-mybatis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring-mybatis.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/.babelrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/.postcssrc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/README_EN.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/config/FileUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/config/FileUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/config/HttpSend.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/config/HttpSend.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/controller/DateUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/controller/DateUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/controller/FiletoaceptController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/controller/FiletoaceptController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/controller/LastController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/controller/LastController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/controller/RequestUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/controller/RequestUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/controller/SendFileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/controller/SendFileController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/controller/ShowFileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/controller/ShowFileController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/controller/UdpsendfileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/controller/UdpsendfileController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/controller/UserAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/controller/UserAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/dao/FiletoaceptMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/dao/FiletoaceptMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/dao/LastMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/dao/LastMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/dao/SendFileMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/dao/SendFileMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/dao/UdpsendfileMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/dao/UdpsendfileMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/dao/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/dao/UserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/model/FileData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/model/FileData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/model/Filetoacept.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/model/Filetoacept.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/model/Last.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/model/Last.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/model/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/model/Login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/model/Udpsendfile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/model/Udpsendfile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/service/FiletoaceptService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/service/FiletoaceptService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/service/Impl/FiletoaceptServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/service/Impl/FiletoaceptServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/service/Impl/LastServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/service/Impl/LastServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/service/Impl/SendFileServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/service/Impl/SendFileServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/service/Impl/UdpsendfileServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/service/Impl/UdpsendfileServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/service/Impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/service/Impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/service/LastService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/service/LastService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/service/SendFileService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/service/SendFileService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/service/UdpsendfileService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/service/UdpsendfileService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/com/hx/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/mapping/FiletoaceptMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/mapping/FiletoaceptMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/mapping/UdpsendfileMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/mapping/UdpsendfileMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/mapping/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/mapping/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/spring-mybatis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/classes/spring-mybatis.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/httpclienttofile/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/build/build.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/build/check-versions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/build/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/build/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/build/vue-loader.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/build/webpack.base.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/build/webpack.dev.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/build/webpack.dll.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/build/webpack.prod.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/config/dev.env.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/config/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/config/prod.env.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/screenshots/wms1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/screenshots/wms2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/src/App.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/src/assets/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/src/components/common/Header.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/src/components/common/Home.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/src/components/common/Sidebar.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/src/components/common/Tags.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/src/components/common/bus.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/src/components/page/403.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/src/components/page/404.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/src/components/page/BaseCharts.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/src/components/page/BaseForm.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/src/components/page/BaseTable.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/src/components/page/Dashboard.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/src/components/page/DragList.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/src/components/page/Login.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/src/components/page/Markdown.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/src/components/page/Permission.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/src/components/page/Tabs.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/src/components/page/Upload.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/src/components/page/VueEditor.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/src/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/src/router/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/static/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/static/css/color-dark.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/static/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/static/css/theme-green/color-green.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/static/css/theme-green/fonts/element-icons.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/static/css/theme-green/fonts/element-icons.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/static/css/theme-green/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/static/img/img.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/static/js/html2canvas.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/static/js/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/static/js/jsPdf.debug.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/static/js/pdfjs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/static/js/receipt.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/static/js/vendor.dll.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/httpclienttofile/static/vuetable.json" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ErrorTreeViewConfiguration">
+    <option name="hideWarnings" value="true" />
+    <option name="HIDE_WARNINGS" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="UdpsdelController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hx/controller/UdpsdelController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="370">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UdpsdelMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hx/dao/UdpsdelMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="222">
+              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UdpsdelMapper.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/UdpsdelMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="12" selection-start-line="12" selection-end-line="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DelMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/DelMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UdpsdelService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hx/service/UdpsdelService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DelServiceimpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hx/service/Impl/DelServiceimpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DelMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hx/dao/DelMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UdpsdelServiceimpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hx/service/Impl/UdpsdelServiceimpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="50">
+              <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+              <folding>
+                <element signature="e#434#435#0" expanded="true" />
+                <element signature="e#479#480#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="spring-beans.schema" />
+        <option value="Unnamed (2)" />
+        <option value="XSLT Stylesheet" />
+        <option value="Tag Library Descriptor" />
+        <option value="myapp" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>json</find>
+      <find>log</find>
+      <find>LastMapper</find>
+      <find>insert</find>
+      <find>insertLoginLog</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/hx/dao/UserDao.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hx/dao/FiletoaceptMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hx/controller/SendFileController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hx/dao/UserMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hx/controller/RequestUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hx/controller/DateUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hx/service/Impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hx/dao/LastMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hx/model/Last.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapping/LastMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hx/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring-mybatis.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hx/service/FiletoaceptService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapping/UdpsendfileMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hx/service/LastService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hx/controller/DleService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hx/service/Impl/LastServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hx/controller/Delcontroller.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hx/service/DelService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hx/service/Impl/DelServiceimpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hx/dao/DelMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapping/UserMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hx/service/UdpsdelService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapping/ReceiveMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hx/service/ReceiveService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hx/dao/ReceiveMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hx/controller/ReceiveController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapping/DispatchMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hx/service/DispatchService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hx/dao/DispatchMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hx/controller/LastController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hx/controller/DispatchController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hx/model/Udpsendfile.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapping/FiletoaceptMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hx/model/Filetoacept.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hx/service/Impl/FiletoaceptServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hx/service/Impl/DispatchServiceimpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hx/service/Impl/ReceiveServiceimpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hx/controller/UserAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hx/controller/FiletoaceptController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hx/controller/SimpleCORSFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hx/controller/DelController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapping/DelMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hx/service/Impl/UdpsdelServiceimpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hx/controller/UdpsdelController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hx/dao/UdpsdelMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapping/UdpsdelMapper.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\Maven_Repo" />
+        <option name="mavenHome" value="D:/maven/apache-maven-3.1.1" />
+        <option name="userSettingsFile" value="D:\maven\apache-maven-3.1.1\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="httpclienttofile Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="httpclienttofile Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="httpclienttofile Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+          <item name="net.sf.json-lib:json-lib:2.3" type="c0821a7e:MavenProjectsStructure$DependencyNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="981" />
+    <option name="width" value="922" />
+    <option name="height" value="1047" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <flattenPackages ProjectPane="false" />
+      <hideEmptyPackages ProjectPane="false" />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="httpclienttofile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="httpclienttofile" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="httpclienttofile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="httpclienttofile" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="httpclienttofile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="httpclienttofile" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="httpclienttofile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="httpclienttofile" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="httpclienttofile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="httpclienttofile" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="httpclienttofile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="httpclienttofile" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="hx" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="httpclienttofile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="httpclienttofile" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="hx" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="httpclienttofile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="httpclienttofile" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="hx" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="httpclienttofile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="httpclienttofile" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="hx" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="httpclienttofile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="httpclienttofile" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="hx" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="httpclienttofile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="httpclienttofile" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="hx" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="Impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="httpclienttofile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="httpclienttofile" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="httpclienttofile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="httpclienttofile" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mapping" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="httpclienttofile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="httpclienttofile" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="httpclienttofile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="httpclienttofile" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="httpclienttofile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="httpclienttofile" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="mapping" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="httpclienttofile" type="cbb8eebc:String" user="httpclienttofile" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="httpclienttofile" type="cbb8eebc:String" user="httpclienttofile" />
+              <item name="src/main" type="cbb8eebc:String" user="src/main" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="httpclienttofile" type="cbb8eebc:String" user="httpclienttofile" />
+              <item name="src/main" type="cbb8eebc:String" user="src/main" />
+              <item name="webapp/WEB-INF" type="cbb8eebc:String" user="webapp/WEB-INF" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="httpclienttofile" type="58d84e3e:PackageViewProjectNode" />
+              <item name="httpclienttofile" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="httpclienttofile" type="58d84e3e:PackageViewProjectNode" />
+              <item name="httpclienttofile" type="616d4139:PackageViewModuleNode" />
+              <item name="com.hx" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/httpclienttofile/src/main/java/com/hx/service/LastService.java" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="spring" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\httpclienttofile\src\main\java\com\hx\controller" />
+      <recent name="D:\httpclienttofile\src\main\java\com\hx\service" />
+      <recent name="D:\httpclienttofile\src\main\java\com\hx\dao" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\httpclienttofile" />
+      <recent name="D:\httpclienttofile\src\main\java\com\hx\controller" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.hx.controller" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.hx.controller" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.tomcat7">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="All in httpclienttofile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="httpclienttofile" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.881" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="httpclienttofile:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_httpclienttofile" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="51653" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method>
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="httpclienttofile:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="tomcat7" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.881" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="httpclienttofile:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_httpclienttofile" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="51653" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+    </configuration>
+    <list>
+      <item itemvalue="Tomcat Server.tomcat7" />
+      <item itemvalue="JUnit.All in httpclienttofile" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.All in httpclienttofile" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9649f410-5526-4f23-a254-109a520bd6a3" name="Default" comment="" />
+      <created>1536635351898</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1536635351898</updated>
+      <workItem from="1536635356523" duration="40699000" />
+      <workItem from="1536800991055" duration="14207000" />
+      <workItem from="1536819039563" duration="2884000" />
+      <workItem from="1536822468559" duration="58000" />
+      <workItem from="1536822551363" duration="481000" />
+      <workItem from="1536823086342" duration="22282000" />
+      <workItem from="1536887059905" duration="9668000" />
+      <workItem from="1537148358299" duration="11007000" />
+      <workItem from="1537262336468" duration="19211000" />
+      <workItem from="1537300866423" duration="382000" />
+      <workItem from="1537301326364" duration="24266000" />
+      <workItem from="1537493531161" duration="9759000" />
+      <workItem from="1537837787631" duration="10959000" />
+      <workItem from="1537860637917" duration="5090000" />
+      <workItem from="1537866638788" duration="2137000" />
+      <workItem from="1537924208104" duration="26552000" />
+      <workItem from="1537971944072" duration="9943000" />
+      <workItem from="1538097714609" duration="4820000" />
+      <workItem from="1538183634752" duration="15829000" />
+      <workItem from="1538269215370" duration="15828000" />
+      <workItem from="1538960719181" duration="14710000" />
+      <workItem from="1539047595415" duration="2139000" />
+      <workItem from="1539049806873" duration="4714000" />
+    </task>
+    <task id="LOCAL-00001" summary="FanCongMin15.51">
+      <created>1536738705939</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1536738705939</updated>
+    </task>
+    <task id="LOCAL-00002" summary="FanCongMin15.51">
+      <created>1536739156399</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1536739156399</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Merge branch 'master' of https://github.com/zlh142857/httpclienttofile&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/com/hx/dao/FiletoaceptMapper.java&#10;#&#9;src/main/java/com/hx/model/Filetoacept.java&#10;#&#9;src/main/java/com/hx/service/FiletoaceptService.java&#10;#&#9;src/main/java/com/hx/service/Impl/FiletoaceptServiceImpl.java&#10;#&#9;src/main/resources/mapping/FiletoaceptMapper.xml">
+      <created>1536740645068</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1536740645068</updated>
+    </task>
+    <task id="LOCAL-00004" summary="范聪敏 9.14">
+      <created>1536887450510</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1536887450510</updated>
+    </task>
+    <task id="LOCAL-00005" summary="9-14">
+      <created>1536888136137</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1536888136137</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Merge branch 'master' of https://github.com/zlh142857/httpclienttofile&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/com/hx/dao/FiletoaceptMapper.java&#10;#&#9;src/main/java/com/hx/model/Filetoacept.java&#10;#&#9;src/main/java/com/hx/service/FiletoaceptService.java&#10;#&#9;src/main/java/com/hx/service/Impl/FiletoaceptServiceImpl.java&#10;#&#9;src/main/resources/mapping/FiletoaceptMapper.xml">
+      <created>1537858102460</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1537858102460</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="All_in_httpclienttofile - 2018.09.13 at 14h 34m 43s.xml">
+      <configuration name="All in httpclienttofile" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_httpclienttofile - 2018.09.13 at 14h 34m 57s.xml">
+      <configuration name="All in httpclienttofile" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_httpclienttofile - 2018.09.13 at 14h 35m 08s.xml">
+      <configuration name="All in httpclienttofile" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_httpclienttofile - 2018.09.13 at 14h 35m 13s.xml">
+      <configuration name="All in httpclienttofile" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="267625000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.532516" side_tool="true" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Application Servers" order="6" weight="0.32936078" />
+      <window_info anchor="right" id="Maven Projects" order="8" weight="0.32995737" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info id="Designer" order="2" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="bottom" id="Debug" order="2" sideWeight="0.49947917" weight="0.31744313" />
+      <window_info anchor="bottom" id="TODO" order="5" weight="0.32900432" />
+      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49946696" weight="0.22860238" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info id="Image Layers" order="3" />
+      <window_info anchor="bottom" id="Java Enterprise" order="9" weight="0.32936078" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.467484" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="14" sideWeight="0.43176973" weight="0.040086675" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.32936078" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32936078" />
+      <window_info active="true" content_ui="combo" x="726" y="51" width="467" height="937" id="Project" order="0" visible="true" weight="0.20575693" />
+      <window_info id="Web" order="6" side_tool="true" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49946696" visible="true" weight="0.32827735" />
+    </layout>
+    <layout-to-restore>
+      <window_info anchor="bottom" id="Application Servers" order="6" weight="0.32936078" />
+      <window_info id="Designer" order="2" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.32936078" />
+      <window_info id="Image Layers" order="3" />
+      <window_info anchor="bottom" id="Run" order="14" sideWeight="0.43176973" weight="0.022751896" />
+      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32936078" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5682303" side_tool="true" weight="0.80823404" />
+      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49946696" weight="0.22860238" />
+      <window_info anchor="bottom" id="TODO" order="5" weight="0.32900432" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Java Enterprise" order="9" weight="0.32936078" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49947917" weight="0.0" />
+      <window_info anchor="right" id="Maven Projects" order="8" weight="0.32995737" />
+      <window_info active="true" content_ui="combo" x="726" y="51" width="467" height="937" id="Project" order="0" visible="true" weight="0.20362474" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info id="Web" order="6" side_tool="true" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49946696" visible="true" weight="0.32827735" />
+      <window_info anchor="bottom" id="Debug" order="2" sideWeight="0.49947917" weight="0.48970747" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="FanCongMin15.51" />
+    <MESSAGE value="范聪敏 9.14" />
+    <MESSAGE value="9-14" />
+    <MESSAGE value="Merge branch 'master' of https://github.com/zlh142857/httpclienttofile&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/com/hx/dao/FiletoaceptMapper.java&#10;#&#9;src/main/java/com/hx/model/Filetoacept.java&#10;#&#9;src/main/java/com/hx/service/FiletoaceptService.java&#10;#&#9;src/main/java/com/hx/service/Impl/FiletoaceptServiceImpl.java&#10;#&#9;src/main/resources/mapping/FiletoaceptMapper.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/zlh142857/httpclienttofile&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/com/hx/dao/FiletoaceptMapper.java&#10;#&#9;src/main/java/com/hx/model/Filetoacept.java&#10;#&#9;src/main/java/com/hx/service/FiletoaceptService.java&#10;#&#9;src/main/java/com/hx/service/Impl/FiletoaceptServiceImpl.java&#10;#&#9;src/main/resources/mapping/FiletoaceptMapper.xml" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hx/controller/UdpsdelController.java</url>
+          <line>31</line>
+          <properties />
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hx/controller/UdpsdelController.java</url>
+          <line>24</line>
+          <properties />
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hx/service/Impl/UdpsdelServiceimpl.java</url>
+          <line>18</line>
+          <properties />
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hx/dao/UdpsdelMapper.java</url>
+          <line>11</line>
+          <properties class="com.hx.dao.UdpsdelMapper" method="udpsdelMany" />
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="46" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hx/service/DispatchService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="13" column="32" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hx/service/ReceiveService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Maven_Repo/org/springframework/spring-web/4.0.2.RELEASE/spring-web-4.0.2.RELEASE.jar!/org/springframework/web/bind/annotation/RequestMapping.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/com/hx/controller/ReceiveController.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hx/service/Impl/ReceiveServiceimpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/com/hx/controller/UdpsdelController.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" selection-start-line="15" selection-end-line="16" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Maven_Repo/org/springframework/spring-web/4.0.2.RELEASE/spring-web-4.0.2.RELEASE.jar!/org/springframework/web/bind/annotation/support/HandlerMethodInvoker.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1">
+          <caret line="128" selection-start-line="128" selection-end-line="128" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="523">
+          <caret line="165" column="28" selection-start-line="165" selection-start-column="28" selection-end-line="165" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/config.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/spring-mvc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="22" column="37" selection-start-line="21" selection-start-column="18" selection-end-line="22" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/spring.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hx/controller/SimpleCORSFilter.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hx/controller/DateUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hx/config/Base.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hx/config/FileUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hx/config/HttpSend.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="625">
+          <caret line="47" column="37" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/com/sun/org/apache/xerces/internal/impl/XMLErrorReporter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9875">
+          <caret line="395" selection-start-line="395" selection-end-line="396" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-mvc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="875">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/ReceiveMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="7" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/SendFileMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/FiletoaceptMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="50" column="9" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hx/service/UdpsendfileService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hx/service/Impl/DispatchServiceimpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hx/service/DelService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hx/controller/UserAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="111" column="45" selection-start-line="111" selection-start-column="28" selection-end-line="111" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hx/controller/DispatchController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hx/controller/LastController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="14" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hx/controller/ReceiveController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="21" column="41" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hx/controller/RequestUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hx/controller/FiletoaceptController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-435">
+          <caret line="29" column="33" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hx/controller/TestControler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hx/controller/ShowFileController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1030">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hx/controller/SendFileController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1350">
+          <caret line="77" selection-start-line="77" selection-end-line="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hx/model/Udpsendfile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hx/controller/DelController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Maven_Repo/org/mybatis/mybatis/3.1.1/mybatis-3.1.1.jar!/org/apache/ibatis/session/Configuration.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="518" selection-start-line="518" selection-end-line="518" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/UdpsendfileMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hx/service/UdpsdelService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hx/controller/UdpsdelController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/mapping/UdpsdelMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/mapping/DelMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hx/dao/DelMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hx/service/Impl/DelServiceimpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hx/controller/UdpsendfileController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/DispatchMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="39" selection-start-column="37" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hx/service/Impl/UdpsdelServiceimpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+          <folding>
+            <element signature="e#434#435#0" expanded="true" />
+            <element signature="e#479#480#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/DelMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hx/dao/UdpsdelMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/UdpsdelMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" selection-start-line="12" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>httpclienttofile:war</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>httpclienttofile</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: aopalliance:aopalliance:1.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

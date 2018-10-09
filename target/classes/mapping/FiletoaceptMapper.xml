@@ -11,7 +11,12 @@
   </resultMap>
 <!--收发-->
   <select id="listFileToAceptMsg" resultMap="BaseResultMap"  parameterType="java.lang.Integer">
-	select * from filetoacept t where t.receiver_id=#{receiverid,jdbcType=INTEGER}  ORDER BY dispatcher_id desc
+
+	select l.name,t.id,t.filename,t.filesaving,t.readunread from filetoacept t,login l where t.dispatcher_id=l.id and t.receiver_id=#{receiverid,jdbcType=INTEGER} and del_flag =0  ORDER BY t.readunread desc
+
+  </select>
+  <select id="listFileToAceptMsgStauts" resultMap="BaseResultMap"  parameterType="java.lang.Integer">
+	select * from filetoacept t where t.receiver_id=#{receiverid,jdbcType=INTEGER} AND readunread=2 ORDER BY dispatcher_id desc
   </select>
 
 
@@ -52,4 +57,14 @@
     </if>
   </trim>
 </insert>
+  <update id="updateReadunread" parameterType="java.lang.Integer">
+    UPDATE filetoacept SET readunread=1 WHERE id=#{id,jdbcType=INTEGER}
+  </update>
+
+  <select id="selectReCount" resultType="java.lang.Integer" parameterType="java.lang.Integer">
+    SELECT COUNT(*) FROM filetoacept WHERE receiver_id=#{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectUrl" resultType="java.lang.String" parameterType="java.lang.Integer">
+    SELECT filesaving FROM filetoacept WHERE id =#{id,jdbcType=INTEGER}
+  </select>
 </mapper>

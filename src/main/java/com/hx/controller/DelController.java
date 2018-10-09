@@ -3,27 +3,37 @@ package com.hx.controller;
 import com.hx.service.DelService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * @author 范聪敏
  * @date 2018/9/19 14:40
  * @desc
+ * DelController
  */
 @Controller
 @RequestMapping("/hx")
 public class DelController {
     @Autowired
     DelService delService;
+
     @RequestMapping("/del")
-    public String deleteMany(int[] chk_value) {
-        System.out.println(chk_value);
-        if (chk_value == null ) {
+    @ResponseBody
+    public String deleteMany(int[] num) {
+          System.out.println(num);
+        if (num == null ) {
             return "redirect:/hx/listmsg.do";
+        }else {
+
+            //直接传数组
+            delService.deleteMany(num);
+            //重定向
+            return "/hx/listmsg.do";
         }
-        //直接传数组
-        delService.deleteMany(chk_value);
-        //重定向
-        return "redirect:/hx/listmsg.do";
+
+
     }
 }
+        

@@ -7,5 +7,7 @@
     <select id="login" resultMap="BaseResultMap" parameterType="String">
           select * from login where name = #{name,jdbcType=VARCHAR}  AND password = #{password,jdbcType=VARCHAR}
     </select>
-
+    <select id="selectRevUserList" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+          SELECT * from login where id not in (#{id,jdbcType=INTEGER});
+    </select>
 </mapper>
